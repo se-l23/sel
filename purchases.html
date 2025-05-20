@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stay & Transportation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fffdf9, #f7f7f7);
+  color: #111;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 22px 10px 12px;
+      border-bottom: 3px solid #000;
+      position: relative;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      animation: fadeInUp 1.2s ease forwards;
+}
+
+    header .logo {
+      position: absolute;
+      left: 5px;
+      top: -30px;
+      width: 180px;
+}
+
+    header h1 {
+      font-size: 48px;
+      color: #8a0d1e;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-shadow: 1px 1px 0 #eee;
+}
+.login-btn {
+  position: absolute;
+  right: 20px;
+  padding: 8px 18px;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+    animation: fadeInUp 1.2s ease forwards;
+
+}
+.login-btn:hover {
+  background: #8a0d1e;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+    animation: fadeInUp 1.2s ease forwards;
+
+}
+  .user-profile img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+      animation: fadeInUp 1.2s ease forwards;
+
+}
+
+  .user-profile span {
+    font-weight: 500;
+}
+
+#logoutBtn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+  margin-left: 10px;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+#logoutBtn:hover {
+  background-color: #cc1f2e;
+  transform: translateY(-2px);
+}
+
+#logoutBtn:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(138, 13, 30, 0.6);
+}
+
+nav {
+      border-bottom: 3px solid #000;
+      background: #fafafa;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 14px 0;
+      font-weight: 600;
+      font-size: 16,8px;
+      animation: fadeInUp 1.2s ease forwards;
+}
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+}
+
+    nav a:hover {
+      color: #8a0d1e;
+}
+
+.container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+}
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #8a0d1e;
+      margin-bottom: 20px;
+      animation: fadeInUp 1.2s ease forwards;
+}
+
+.grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(333px, 225px));
+      gap: 30px;
+}
+
+.card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+}
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+}
+
+    .card h3 {
+      color: #8a0d1e;
+      font-size: 17.6px;
+      margin-bottom: 10px;
+}
+
+footer {
+      border-top: 3px solid #000;
+      padding: 28px 10px 45px;
+      text-align: center;
+      background: #f9f9f9;
+      margin-top: 50px;
+      animation: fadeInUp 1.2s ease forwards;
+
+}
+
+    footer span {
+      font-weight: 600;
+      color: black;
+      display: block;
+      margin-bottom: 8px;
+}
+
+    footer a {
+      text-decoration: none;
+      color: #000;
+      display: block;
+      margin: 6px 0;
+}
+
+    footer a:hover {
+      color: #8a0d1e;
+}
+  </style>
+</head>
+<body>
+  <header>
+<a href="whatisjapan.html">
+  <img src="LOGO_IT__1_-removebg-preview.png" alt="What's In Japan logo" class="logo"></a>
+    <h1>Purchases</h1>
+  <a href="login.html" class="login-btn" id="loginBtn">Login</a>
+</header>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="staytransportation.html">STAY & TRANSPORTATION</a></li>
+      <li><a href="touristattraction.html">TOURIST ATTRACTIONS</a></li>
+      <li><a href="purchases.html">PURCHASES</a></li>
+      <li><a href="places-to-eat.html">PLACES TO EAT</a></li>
+    </ul>
+  </nav>
+
+<h2>Malls</h2>
+    <div class="grid">
+        <div class="card fade-in" style="animation-delay: 0.2s;">
+        <img src="pm-1.jpg" alt="Ginza Six Tokyo">
+        <div class="card-title"><b>GINZA SIX - TOKYO</b></div>
+        <div class="card-description">Located in Tokyo’s upscale Ginza district, Ginza Six is a luxury shopping complex featuring high-end international and Japanese brands. The mall also includes art installations, fine dining, and a beautiful rooftop garden with city views. It’s ideal for those looking for a premium shopping experience.
+</div>
+    </div>
+            <div class="card fade-in" style="animation-delay: 0.4s;">
+            <img src="pm-2.jpg" alt="Shibuya Scramble Square Tokyo">
+            <div class="card-title"><b>SHIBUYA SCRAMBLE SQUARE - TOKYO</b></div>
+            <div class="card-description">Right next to Shibuya Station, this modern mall is part of one of Tokyo’s tallest buildings. It offers a mix of trendy fashion, cosmetics, and tech, plus an observation deck called “Shibuya Sky” that provides a 360-degree view of the city. It’s a great stop after crossing the famous Shibuya Crossing.
+</div>
+        </div>
+            <div class="card fade-in" style="animation-delay: 0.6s;">
+            <img src="pm-3.jpg" alt="Namba Parks Osaka">
+            <div class="card-title"><b>NAMBA PARKS - OSAKA</b></div>
+            <div class="card-description">Namba Parks is a stylish and unique mall built into a canyon-like structure with gardens on its rooftop. Located in the lively Namba area of Osaka, it features a variety of shops, restaurants, and even a cinema. The architecture and open-air spaces make it a fun place to explore.
+</div>
+        </div>
+            <div class="card fade-in" style="animation-delay: 0.8s;">
+            <img src="pm-4.jpeg" alt="Canal City Hakata Fukuoka">
+            <div class="card-title"><b>CANAL CITY HAKATA - FUKUOKA</b></div>
+            <div class="card-description">Often called a “city within a city,” Canal City in Fukuoka blends shopping, entertainment, dining, and even a canal that runs through the complex. It has fashion stores, themed restaurants, a theater, and regular fountain shows, making it a top destination in southern Japan.
+
+</div>
+        </div>
+    </div>
+
+<h2>Shops</h2>
+    <div class="grid">
+        <div class="card fade-in" style="animation-delay: 0.3s;">
+            <img src="ps-1.jpeg" alt="Don Quijote">
+            <div class="card-title"><b>DON QUIJOTE</b></div>
+            <div class="card-description">Don Quijote, affectionately known as Donki, is a quirky, multi-floor discount store found all over Japan. It sells everything from snacks and cosmetics to electronics and novelty items. The shop is a treasure trove for tourists, offering a variety of affordable souvenirs, unique Japanese products, and sometimes even tax-free shopping for international visitors.
+</div>
+        </div>
+        <div class="card fade-in" style="animation-delay: 0.5s;">
+            <img src="ps-2.jpg" alt="Muji">
+            <div class="card-title"><b>MUJI</b></div>
+            <div class="card-description">Muji, the minimalist Japanese retail brand, offers a wide range of products, from home goods to clothing, stationery, and food. The store focuses on simplicity, quality, and functionality. It’s a perfect place to pick up simple, elegant Japanese design products that are practical and easy to take home.
+</div>
+        </div>
+        <div class="card fade-in" style="animation-delay: 0.7s;">
+            <img src="ps-3.png" alt="Daiso">
+            <div class="card-title"><b>DAISO</b></div>
+            <div class="card-description">Daiso is a budget-friendly store where most items cost around 100 yen (about $1 USD). You can find high-quality home goods, stationery, kitchenware, beauty items, and cute Japanese souvenirs. It’s a great place for travelers who want to bring home fun and affordable gifts.
+</div>
+        </div>
+        <div class="card fade-in" style="animation-delay: 0.9s;">
+            <img src="ps-4.jpg" alt="Kiddy Land">
+            <div class="card-title"><b>KIDDY LAND</b></div>
+            <div class="card-description">Kiddy Land is a must-visit for fans of Japanese pop culture, especially families or those looking for unique toys, anime merchandise, and character goods. Located in Harajuku, this iconic store features popular Japanese characters like Hello Kitty, Pokémon, and Totoro, along with limited-edition items. It’s a fun stop for all ages.
+</div>
+        </div>
+    </div>
+
+   <footer>
+    <span>CONTACT US 📸</span>
+    <a href="mailto:marselinus.jy@santa-laurensia.sch.id">marselinus.jy@santa-laurensia.sch.id</a>
+    <a href="mailto:andrew.budiyanto@santa-laurensia.sch.id">andrew.budiyanto@santa-laurensia.sch.id</a>
+  </footer>
+
+  <script>
+    const username = localStorage.getItem("username");
+    const profileDiv = document.getElementById("userProfile");
+
+    if (username) {
+      profileDiv.innerHTML = `
+        <img src="pfp.png" alt="User Profile Picture" />
+        <span>${username}</span>
+        <button id="logoutBtn">Logout</button>
+      `;
+    }
+
+    document.addEventListener("click", function (e) {
+      if (e.target && e.target.id === "logoutBtn") {
+        localStorage.removeItem("username");
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+</body>
+</html>

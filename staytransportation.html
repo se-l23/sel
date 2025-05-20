@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stay & Transportation</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #fffdf9, #f7f7f7);
+  color: #111;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeInUp 1.2s ease forwards;
+}
+
+header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 22px 10px 12px;
+      border-bottom: 3px solid #000;
+      position: relative;
+      background-color: #fff;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      animation: fadeInUp 1.2s ease forwards;
+}
+
+    header .logo {
+      position: absolute;
+      left: 5px;
+      top: -30px;
+      width: 180px;
+}
+
+    header h1 {
+      font-size: 48px;
+      color: #8a0d1e;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-shadow: 1px 1px 0 #eee;
+}
+.login-btn {
+  position: absolute;
+  right: 20px;
+  padding: 8px 18px;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+    animation: fadeInUp 1.2s ease forwards;
+
+}
+.login-btn:hover {
+  background: #8a0d1e;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+    animation: fadeInUp 1.2s ease forwards;
+
+}
+  .user-profile img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+      animation: fadeInUp 1.2s ease forwards;
+
+}
+
+  .user-profile span {
+    font-weight: 500;
+}
+
+#logoutBtn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+  margin-left: 10px;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+#logoutBtn:hover {
+  background-color: #cc1f2e;
+  transform: translateY(-2px);
+}
+
+#logoutBtn:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(138, 13, 30, 0.6);
+}
+
+nav {
+      border-bottom: 3px solid #000;
+      background: #fafafa;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 14px 0;
+      font-weight: 600;
+      font-size: 16,8px;
+      animation: fadeInUp 1.2s ease forwards;
+}
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+}
+
+    nav a:hover {
+      color: #8a0d1e;
+}
+
+.container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 20px;
+}
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      color: #8a0d1e;
+      margin-bottom: 20px;
+      animation: fadeInUp 1.2s ease forwards;
+}
+
+.grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(333px, 225px));
+      gap: 30px;
+}
+
+.card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+      padding: 20px;
+}
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+}
+
+    .card h3 {
+      color: #8a0d1e;
+      font-size: 17.6px;
+      margin-bottom: 10px;
+}
+
+footer {
+      border-top: 3px solid #000;
+      padding: 28px 10px 45px;
+      text-align: center;
+      background: #f9f9f9;
+      margin-top: 50px;
+      animation: fadeInUp 1.2s ease forwards;
+
+}
+
+    footer span {
+      font-weight: 600;
+      color: black;
+      display: block;
+      margin-bottom: 8px;
+}
+
+    footer a {
+      text-decoration: none;
+      color: #000;
+      display: block;
+      margin: 6px 0;
+}
+
+    footer a:hover {
+      color: #8a0d1e;
+}
+  </style>
+</head>
+<body>
+  <header>
+<a href="whatisjapan.html">
+  <img src="LOGO_IT__1_-removebg-preview.png" alt="What's In Japan logo" class="logo"></a>
+    <h1>Stay & Transportation</h1>
+  <a href="login.html" class="login-btn" id="loginBtn">Login</a>
+</header>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="staytransportation.html">STAY & TRANSPORTATION</a></li>
+      <li><a href="touristattraction.html">TOURIST ATTRACTIONS</a></li>
+      <li><a href="purchases.html">PURCHASES</a></li>
+      <li><a href="places-to-eat.html">PLACES TO EAT</a></li>
+    </ul>
+  </nav>
+
+<h2>Places of Stay</h2>
+    <div class="grid">
+        <div class="card fade-in" style="animation-delay: 0.2s;">
+        <img src="ST-1.jpg" alt="Park Hyatt Tokyo">
+        <div class="card-title"><b>PARK HYATT - TOKYO</b></div>
+        <div class="card-description">Located in the heart of Shinjuku, Park Hyatt Tokyo is a luxury hotel known for its elegant atmosphere and stunning views of Mount Fuji and the Tokyo skyline. It became internationally famous after being featured in the movie Lost in Translation. The hotel offers spacious rooms, fine dining, and a tranquil spa on the 47th floor.</div>
+    </div>
+            <div class="card fade-in" style="animation-delay: 0.4s;">
+            <img src="ST-2.jpg" alt="Ritz-Carlton Kyoto">
+            <div class="card-title"><b>THE RITZ-CARLTON – KYOTO</b></div>
+            <div class="card-description">Set along the peaceful Kamogawa River, The Ritz-Carlton in Kyoto blends modern luxury with traditional Japanese design. Guests enjoy tatami-style rooms with a modern twist, river views, Michelin-starred cuisine, and close access to cultural landmarks like temples and gardens. It’s perfect for a luxurious and serene Kyoto experience.</div>
+        </div>
+            <div class="card fade-in" style="animation-delay: 0.6s;">
+            <img src="st-3.jpg" alt="Hoshinoya Fuji">
+            <div class="card-title"><b>HOSHINOYA FUJI – FUJIKAWAGUCHIKO</b></div>
+            <div class="card-description">Hoshinoya Fuji is Japan’s first luxury glamping resort, located near Mount Fuji. This unique hotel offers minimalist, stylish cabins with breathtaking views of the iconic mountain. Guests can enjoy outdoor activities like canoeing, hiking, and stargazing, all while experiencing high-end hospitality in nature.</div>
+        </div>
+            <div class="card fade-in" style="animation-delay: 0.8s;">
+            <img src="st-4.jpg" alt="Hotel Granvia Kyoto">
+            <div class="card-title"><b>HOTEL GRANVIA – KYOTO</b></div>
+            <div class="card-description">Conveniently located inside Kyoto Station, Hotel Granvia is a perfect choice for travelers who want easy access to transportation. The hotel features comfortable rooms, multiple restaurants, and modern amenities. It’s ideal for both business and leisure travelers looking to explore Kyoto and beyond.</div>
+        </div>
+    </div>
+
+<h2>Transportation</h2>
+    <div class="grid">
+        <div class="card fade-in" style="animation-delay: 0.3s;">
+            <img src="stp-1.jpg" alt="Shinkansen">
+            <div class="card-title"><b>SHINKANSEN (BULLET TRAIN)</b></div>
+            <div class="card-description">The Shinkansen is Japan’s famous high-speed bullet train. It connects major cities like Tokyo, Kyoto, Osaka, Hiroshima, and more. It’s incredibly fast, clean, and always on time, making it perfect for exploring different regions of Japan comfortably and quickly. Best value for tourists. Best for long-distance travel.</div>
+        </div>
+        <div class="card fade-in" style="animation-delay: 0.5s;">
+            <img src="stp-2.jpg" alt="Bus">
+            <div class="card-title"><b>BUSES</b></div>
+            <div class="card-description">In areas where trains don’t reach, buses are a reliable option. Long-distance buses (like Willer Express or JR Bus) are a budget-friendly alternative to trains. Good for regional or rural travel.</div>
+        </div>
+        <div class="card fade-in" style="animation-delay: 0.7s;">
+            <img src="stp-3.jpg" alt="Subway">
+            <div class="card-title"><b>LOCAL SUBWAY AND TRAIN LINES</b></div>
+            <div class="card-description">Major cities like Tokyo, Osaka, and Kyoto have excellent subway and train systems. They’re efficient, safe, and easy to use with English signs. IC cards like Suica or Pasmo (Tokyo) and ICOCA (Osaka/Kyoto) can be used for quick access and work on most buses and trains. Best for city travel.</div>
+        </div>
+        <div class="card fade-in" style="animation-delay: 0.9s;">
+            <img src="stp-4.jpg" alt="Taxi">
+            <div class="card-title"><b>TAXIS</b></div>
+            <div class="card-description">Taxis in Japan are clean and safe, but they can be expensive, especially for long distances. They’re a great option late at night when trains stop or if you’re traveling with luggage or in a group. Convenient but expensive.</div>
+        </div>
+    </div>
+
+   <footer>
+    <span>CONTACT US 📸</span>
+    <a href="mailto:marselinus.jy@santa-laurensia.sch.id">marselinus.jy@santa-laurensia.sch.id</a>
+    <a href="mailto:andrew.budiyanto@santa-laurensia.sch.id">andrew.budiyanto@santa-laurensia.sch.id</a>
+  </footer>
+
+  <script>
+    const username = localStorage.getItem("username");
+    const profileDiv = document.getElementById("userProfile");
+
+    if (username) {
+      profileDiv.innerHTML = `
+        <img src="pfp.png" alt="User Profile Picture" />
+        <span>${username}</span>
+        <button id="logoutBtn">Logout</button>
+      `;
+    }
+
+    document.addEventListener("click", function (e) {
+      if (e.target && e.target.id === "logoutBtn") {
+        localStorage.removeItem("username");
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+</body>
+</html>

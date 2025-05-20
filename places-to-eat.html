@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Places to Eat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #fffdf9, #f7f7f7);
+      color: #111;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeInUp 1.2s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.2s; }
+    .delay-2 { animation-delay: 0.4s; }
+    .delay-3 { animation-delay: 0.8s; }
+    .delay-4 { animation-delay: 0.6s; }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 22px 10px 12px;
+      border-bottom: 3px solid #000;
+      position: relative;
+      background-color: #fff;
+            animation: fadeInUp 1.2s ease forwards;
+
+    }
+
+    header .logo {
+      position: absolute;
+      left: 5px;
+      top: -30px;
+      width: 180px;
+    }
+
+    header h1 {
+      font-size: 48px;
+      color: #8a0d1e;
+      font-weight: 700;
+    }
+.login-btn {
+  position: absolute;
+  right: 20px;
+  padding: 8px 18px;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+    animation: fadeInUp 1.2s ease forwards;
+
+}
+.login-btn:hover {
+  background: #8a0d1e;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+    animation: fadeInUp 1.2s ease forwards;
+
+}
+  .user-profile img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+      animation: fadeInUp 1.2s ease forwards;
+
+}
+
+  .user-profile span {
+    font-weight: 500;
+}
+
+#logoutBtn {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease-in-out;
+  margin-left: 10px;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+#logoutBtn:hover {
+  background-color: #cc1f2e;
+  transform: translateY(-2px);
+}
+
+#logoutBtn:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(138, 13, 30, 0.6);
+}
+    nav {
+      border-bottom: 3px solid #000;
+      background: #fafafa;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 14px 0;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    nav a:hover {
+      color: #8a0d1e;
+    }
+
+    .main-image {
+      width: 100%;
+      height: auto;
+      max-height: 350px;
+      object-fit: cover;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    .main-content {
+      padding: 30px 50px;
+      text-align: justify;
+    }
+
+    .main-content p {
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .subcategories {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      font-weight: 700;
+      font-size: 18px;
+      border-top: 3px solid #000;
+      border-bottom: 3px solid #000;
+      padding: 16px 0;
+      margin: 30px 50px;
+    }
+
+    .subcategories div {
+      cursor: default;
+    }
+
+    .content-section {
+      padding: 0 50px 40px;
+      text-align: justify;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+    .content-section img {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 20px auto 0;
+      border-radius: 8px;
+    }
+
+    footer {
+      border-top: 3px solid #000;
+      padding: 28px 10px 45px;
+      text-align: center;
+      background: #f9f9f9;
+    }
+
+    footer span {
+      font-weight: 600;
+      color: black;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    footer a {
+      text-decoration: none;
+      color: #000;
+      display: inline-block;
+      margin: 6px 14px;
+    }
+
+    footer a:hover {
+      color: #8a0d1e;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="whatisjapan.html">
+      <img src="LOGO_IT__1_-removebg-preview.png" alt="What's In Japan logo" class="logo fade-in delay-1">
+    </a>  
+    <a href="login.html" class="login-btn" id="loginBtn">Login</a>
+    <h1 class="fade-in delay-2">Places To Eat</h1>
+  </header>
+
+  <nav class="fade-in delay-3">
+    <ul>
+      <li><a href="staytransportation.html">STAY & TRANSPORTATION</a></li>
+      <li><a href="touristattraction.html">TOURIST ATTRACTIONS</a></li>
+      <li><a href="purchases.html">PURCHASES</a></li>
+      <li><a href="places-to-eat.html">PLACES TO EAT</a></li>
+    </ul>
+  </nav>
+
+  <section class="fade-in delay-4">
+    <img src="pte1.png" alt="Japanese Restaurants" class="main-image">
+    <div class="main-content">
+      <p>
+        Japan offers an incredible array of dining experiences, from high-end restaurants to casual street food stalls and cozy cafes. For restaurants, Japan is famous for dishes like sushi, ramen, and tempura. Sushi lovers can indulge at upscale spots like Sukiyabashi Jiro in Tokyo or visit casual conveyor belt sushi places like Sushiro. Ramen shops, such as Ippudo in Tokyo, serve rich broths and perfectly cooked noodles, while kaiseki restaurants, like Gion Karyo in Kyoto, offer exquisite multi-course meals that showcase traditional Japanese cuisine at its finest. Tempura enthusiasts will enjoy dining at places like Tenshige, where fresh, crispy tempura is the highlight.
+      </p>
+    </div>
+  </section>
+
+  <section class="subcategories fade-in delay-1">
+    <div><a href="restaurant.html">RESTAURANTS</a></div>
+    <div><a href="streetfoods.html">STREET FOODS</a></div>
+    <div><a href="cafes.html">CAFES</a></div>
+  </section>
+
+  <section class="content-section fade-in delay-2" style="display: flex; gap: 30px; align-items: flex-start;">
+  <div style="flex: 1;">
+    <p>
+      Street food in Japan is vibrant and easily accessible, especially in areas like Osaka and Tokyo. Popular treats include takoyaki (octopus-filled balls) and okonomiyaki, a savory pancake packed with vegetables, seafood, or meat. You can find these street foods in busy districts like Dotonbori in Osaka. Other must-try items include yakisoba (fried noodles), taiyaki (fish-shaped pastries filled with sweet fillings), and crispy karaage (fried chicken), which are widely available in food stalls and markets. These flavorful bites offer a taste of Japan’s rich street food culture.
+    </p>
+
+    <p style="margin-top: 20px;">
+      Japan’s café culture is equally diverse, ranging from traditional tea houses to trendy coffee shops. For a truly authentic experience, try matcha at one of Kyoto’s tea houses, such as Ippodo Tea Company, where you can enjoy a quiet atmosphere while sipping traditional Japanese green tea paired with delicate sweets. Modern cafes like Blue Bottle Coffee in Tokyo and % Arabica in Kyoto focus on high-quality coffee and stylish, minimalist design. Additionally, themed cafes, such as maid cafes in Akihabara and cat cafes throughout major cities, offer unique, immersive dining experiences that add a fun twist to your visit.
+    </p>
+  </div>
+
+  <img src="pte2.jpg" alt="Japanese Cafe" style="width: 45%; border-radius: 8px;">
+</section>
+
+  <footer>
+    <span>CONTACT US 📸</span>
+    <a href="mailto:marselinus.jy@santa-laurensia.sch.id">marselinus.jy@santa-laurensia.sch.id</a>
+    <a href="mailto:andrew.budiyanto@santa-laurensia.sch.id">andrew.budiyanto@santa-laurensia.sch.id</a>
+  </footer>
+
+</body>
+</html>
